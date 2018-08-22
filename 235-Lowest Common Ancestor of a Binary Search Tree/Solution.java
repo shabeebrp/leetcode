@@ -16,9 +16,9 @@ class Solution {
         
     }
     private TreeNode helper(TreeNode root, TreeNode p, TreeNode q){
-         if(root.val == p.val || root.val == q.val)
-            return root;
-        if(p.val<root.val && q.val>root.val)
+         // if(root.val == p.val || root.val == q.val)
+         //    return root;
+        if(p.val<=root.val && q.val>=root.val)
             return root;
         if(q.val<root.val)
             return helper(root.left,p,q);
